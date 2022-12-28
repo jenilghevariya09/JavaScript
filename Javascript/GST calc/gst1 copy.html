@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+    <title>Gst Calc.</title>
+   
+</head>
+    <body>
+        <form onsubmit="return tcalc();">
+            <table>
+              <tr>
+                <td>Price</td>
+                <td>
+                  <input type="number" min="0"  step="0.01"
+                         id="taxprice" required />
+                </td>
+              </tr>
+           
+          
+              <tr>
+                <td>Tax Percentage</td>
+                <td>
+                
+            <div class="tot_pin_requested" id="taxperc" >
+                <div>
+                <input class="checkbox1" name="gstrate" id="5" type="radio"  value="5" onchange="tcalc(this.value)">5%
+            </div>
+            <div>
+                <input class="checkbox1" name="gstrate" id="9" type="radio"  value="12" onchange="tcalc(this.value)">12%
+            </div>
+            <div>
+                <input class="checkbox1" name="gstrate" id="18" type="radio"  value="18" onchange="tcalc(this.value)">18%
+            </div>
+            <div>
+                <input class="checkbox1" name="gstrate" id="28" type="radio"  value="28" onchange="tcalc(this.value)">28%
+                </div>
+            </div>
+        </td>
+              </tr>
+           
+             
+           
+              <tr>
+                <td>Total With Tax</td>
+                <td>
+                  <input type="text"  id="taxgrand"/>
+                </td>
+              </tr>
+              <tr>
+                <td>Tax Amount</td>
+                <td>
+                  <input type="text" readonly id="taxamt"/>
+                </td>
+              </tr>
+            </table>
+           
+            <input type="submit" value="Go!"/>
+          </form>
+         
+    </body>
+    <script  src="./gst.js">  </script>
+
+</html>
