@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Gst Calc.</title>
+   
+</head>
+    <body>
+        <form onsubmit="tcalc()">
+            <table>
+
+              
+              <tr>
+                <td>Amount excluding GST<br><br></td>
+                <td>
+                  <input type="number"   id="taxprice"   /><br><br>
+                </td>
+              </tr>
+           
+          
+              <tr>
+                <td>GST Percentage<br><br><br><br><br><br></td>
+                <td>
+                    <input name="gstpercentage" id="taxperc" type="number" onkeyup="calc(this.value)" />
+                <div>
+                    <input class="checkbox1" name="gstrate" id="5" type="radio"  value="5" oninput="tcalc(this.value)">5%
+                </div>
+                <div>
+                    <input class="checkbox1" name="gstrate" id="12" type="radio"  value="12" oninput="tcalc(this.value)">12%
+                </div>
+                <div>
+                    <input class="checkbox1" name="gstrate" id="18" type="radio"  value="18" oninput="tcalc(this.value)">18%
+                </div>
+                <div>
+                    <input class="checkbox1" name="gstrate" id="28" type="radio"  value="28" oninput="tcalc(this.value)">28%
+                </div><br>
+                </td>
+              </tr>
+              <tr>
+                <td>Amount including GST<br><br></td>
+                <td>
+                  <input type="number" min="0"  id="taxgrand"/><br><br>
+                </td>
+              </tr>
+              
+              
+           <td>
+            <input type="submit" value="Go!"/><br><br>
+          </td>
+          
+          <tr>
+              <td>Tax Amount</td>
+              <td>
+                <input type="number" readonly id="taxamt" style="border-style: none;" />
+              </td>
+           
+            <td>CGST: </td>
+            <td>
+              <input type="number" readonly style="border-style: none;"  id="cgst"/>
+            </td>
+        
+            <td>SGST: </td>
+            <td>
+              <input type="number" readonly style="border-style: none;" id="sgst"/>
+            </td>
+          </tr>
+        </form>
+        </table>
+         
+    </body>
+    <script  src="./gst.js">  </script>
+
+</html>
